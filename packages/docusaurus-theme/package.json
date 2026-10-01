@@ -1,6 +1,6 @@
 {
   "name": "@mygamedevtools/docusaurus-theme",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "My Gamedev Tools brand for Docusaurus sites: fonts, colors, navbar stripe and logo files. Distributed as a release tarball, not on npm.",
   "license": "UNLICENSED",

@@ -6,19 +6,13 @@ the logo files.
 
 ## Install
 
-The theme isn't on npm; each design-system release has the tarball attached. Because the
-design-system repo is private, keep the tarball in the docs site's repo and install it from there,
-so neither installs nor CI need access to this repo:
+The theme isn't on npm. Each design-system release has the tarball attached; install it by URL:
 
 ```sh
-# in the docs site's repo, with the GitHub CLI signed in
-gh release download v0.1.0 --repo mygamedevtools/design-system --pattern '*.tgz' --dir vendor
-npm i ./vendor/mygamedevtools-docusaurus-theme-0.1.0.tgz
+npm i https://github.com/mygamedevtools/design-system/releases/download/v1.0.0/mygamedevtools-docusaurus-theme-1.0.0.tgz
 ```
 
-Commit `vendor/*.tgz` along with `package.json` and the lockfile. To update, download the newer
-release the same way, install it, and delete the old tarball. (If this repo ever becomes public,
-`npm i <release asset URL>` works too.)
+To update, install the newer release's URL.
 
 ## Setup
 

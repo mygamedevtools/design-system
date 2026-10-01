@@ -74,9 +74,8 @@ complete without a build and its GUIDs stay stable. `dist/` and `.cache/` are no
 ## Releases
 
 Nothing is published to npm. Publishing a GitHub release runs `.github/workflows/release.yml`, which
-packs the Docusaurus theme and attaches the tarball to the release. This repo is private, so docs
-sites keep a downloaded copy of the tarball in their own repo and install from it (see the theme's
-README).
+packs the Docusaurus theme and attaches the tarball to the release; docs sites install it by URL
+(see the theme's README).
 Before releasing, bump `version` in `packages/docusaurus-theme/package.json` and tag the release
 `v<version>`; the workflow fails if they don't match.
 
