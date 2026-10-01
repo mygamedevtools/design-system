@@ -1,0 +1,47 @@
+{
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "display": {
+        "$value": ["Russo One", "Arial Black", "sans-serif"],
+        "$description": "Headings, wordmark, package names. Ships in a single weight (400), so never set it bold."
+      },
+      "body": {
+        "$value": ["Rethink Sans", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+        "$description": "Body copy and UI. Variable font, weights 400 to 800."
+      },
+      "mono": {
+        "$value": ["Red Hat Mono", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        "$description": "Code, labels, eyebrows. Variable font, weights 300 to 700."
+      }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular": { "$value": 400 },
+      "medium": { "$value": 500 },
+      "semibold": { "$value": 600 },
+      "bold": { "$value": 700 }
+    },
+    "size": {
+      "$type": "dimension",
+      "xs": { "$value": "12px" },
+      "sm": { "$value": "14px" },
+      "md": { "$value": "16px" },
+      "lg": { "$value": "20px" },
+      "xl": { "$value": "24px" },
+      "2xl": { "$value": "32px" },
+      "3xl": { "$value": "40px" },
+      "4xl": { "$value": "56px" }
+    },
+    "line-height": {
+      "$type": "number",
+      "tight": { "$value": 1.05 },
+      "snug": { "$value": 1.25 },
+      "normal": { "$value": 1.55 }
+    },
+    "letter-spacing": {
+      "$type": "dimension",
+      "label": { "$value": "0.1em", "$description": "Uppercase mono labels and eyebrows" }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "package": "example-tool",
+  "title": "Example Tool",
+  "publisher": "My GameDev Tools",
+  "tagline": "One line that says what it does.",
+  "summary": "One or two sentences on what the package does and why it helps, as they should appear in search results.",
+  "category": "[CONFIRM category, e.g. Tools/Utilities]",
+  "unity": "6000.0",
+  "keywords": ["example", "tool", "unity"],
+  "dependencies": ["[CONFIRM: list package dependencies, or leave this list empty]"],
+  "aiDisclosure": "[CONFIRM: describe any AI-assisted content, or remove this field if none]",
+  "includesUiKit": true,
+  "links": {
+    "documentation": "https://example.com/docs",
+    "support": "support@example.com"
+  },
+  "media": {
+    "cover": "/site/img/unity-loading-dark.png"
+  },
+  "screenshots": [
+    {
+      "caption": "A short caption about what this shows.",
+      "image": "/site/img/unity-loading-dark.png"
+    },
+    {
+      "caption": "Keep each caption to one idea.",
+      "image": "/site/img/unity-gallery-dark.png"
+    }
+  ]
+}

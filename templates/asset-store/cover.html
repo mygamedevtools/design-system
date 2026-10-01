@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <title>Asset Store cover (1950×1300)</title>
+  <!-- Unity: the cover may show the title, the publisher's logo or name, and a tagline. -->
+  <link rel="stylesheet" href="../template.css">
+  <style>
+    body { width: 1950px; height: 1300px; padding: 120px; display: grid; grid-template-columns: 860px 1fr; column-gap: 80px; }
+    .text { display: flex; flex-direction: column; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 22px; font-size: 26px; }
+    .brand img { width: 72px; height: 72px; }
+    h1 { font-size: 150px; }
+    .tagline { margin: 44px 0 0; font-size: 46px; line-height: 1.3; color: var(--mgt-color-text-muted); }
+    .visual { align-self: end; height: 760px; display: flex; align-items: flex-end; justify-content: flex-end; }
+    .shot { border-radius: 28px; border: 2px solid var(--mgt-color-border); box-shadow: 0 40px 120px rgba(0, 0, 0, 0.45); }
+    .big-mark { width: 520px; height: 520px; align-self: center; justify-self: center; }
+    body:not(.no-image) .big-mark { display: none; }
+    body.no-image .visual { display: none; }
+  </style>
+  <script type="module" src="../template.js"></script>
+</head>
+<body data-stripes>
+  <div class="content text">
+    <div class="brand label"><img data-logo="mark" alt=""><span>My Gamedev Tools</span></div>
+    <div>
+      <h1 class="display" data-param="name">My Scene Manager</h1>
+      <p class="tagline" data-param="tagline" data-hide-empty>Scene transitions, in one line.</p>
+    </div>
+  </div>
+  <div class="content visual"><img class="shot" data-param-src="image" data-fit alt=""></div>
+  <img class="content big-mark" data-logo="mark" alt="">
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* Self-hosted @font-face rules for the reference site and templates in this repo.
+   Docs sites get the same fonts through @mygamedevtools/docusaurus-theme (Fontsource). */
+@font-face {
+  font-family: 'Russo One';
+  src: url('./russo-one/RussoOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rethink Sans';
+  src: url('./rethink-sans/RethinkSans-Variable.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Red Hat Mono';
+  src: url('./red-hat-mono/RedHatMono-Variable.ttf') format('truetype');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}

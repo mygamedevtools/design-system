@@ -1,0 +1,38 @@
+{
+  "space": {
+    "$type": "dimension",
+    "$description": "4px base grid",
+    "0": { "$value": "0px" },
+    "1": { "$value": "4px" },
+    "2": { "$value": "8px" },
+    "3": { "$value": "12px" },
+    "4": { "$value": "16px" },
+    "5": { "$value": "24px" },
+    "6": { "$value": "32px" },
+    "7": { "$value": "48px" },
+    "8": { "$value": "64px" }
+  },
+  "radius": {
+    "$type": "dimension",
+    "sm": { "$value": "4px", "$description": "Inputs, Unity controls" },
+    "md": { "$value": "8px", "$description": "Code blocks, cards" },
+    "lg": { "$value": "14px", "$description": "Panels" },
+    "pill": { "$value": "999px", "$description": "Buttons" }
+  },
+  "stripe": {
+    "$type": "dimension",
+    "thickness": { "$value": "16px", "$description": "Diagonal stripe width on a 300px-wide card; scale with the card" },
+    "rule": { "$value": "3px", "$description": "Horizontal tri-color rule under headers" }
+  },
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "fast": { "$value": "120ms" },
+      "base": { "$value": "200ms" }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": { "$value": [0.2, 0, 0, 1] }
+    }
+  }
+}

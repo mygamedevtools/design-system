@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:mgt="MyGameDevTools.UI" editor-extension-mode="False">
+    <!--
+        A branded loading screen in the style of scene-loader's samples: stripes in the corner,
+        the mark, a label, the percentage and a progress bar. Drive "value" and "fill" from your
+        loading progress.
+    -->
+    <ui:VisualElement class="mgt-root mgt-screen" style="justify-content: center; align-items: center;">
+        <mgt:CornerStripes />
+        <ui:VisualElement style="width: 380px; align-items: flex-start;">
+            <mgt:BrandMark style="width: 56px; height: 56px; margin-bottom: 20px;" />
+            <ui:VisualElement class="mgt-eyebrow" style="margin-bottom: 6px;">
+                <ui:VisualElement class="mgt-eyebrow__bar" />
+                <ui:VisualElement class="mgt-eyebrow__bar mgt-eyebrow__bar--2" />
+                <ui:VisualElement class="mgt-eyebrow__bar mgt-eyebrow__bar--3" />
+                <ui:Label text="LOADING" class="mgt-label mgt-label--accent" />
+            </ui:VisualElement>
+            <ui:Label name="value" text="62%" class="mgt-value mgt-title--xl" style="margin-bottom: 14px;" />
+            <ui:VisualElement class="mgt-progress" style="width: 100%;">
+                <ui:VisualElement name="fill" class="mgt-progress__fill" style="width: 62%;" />
+            </ui:VisualElement>
+            <ui:Label text="SCENEB · LOADING" class="mgt-label" style="margin-top: 12px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

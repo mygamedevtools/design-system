@@ -1,0 +1,24 @@
+{
+  "name": "mygamedevtools-design-system",
+  "private": true,
+  "description": "Design system for My Gamedev Tools: tokens, logo, fonts, docs theme, Unity editor styles and marketing templates.",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build-tokens.mjs && node scripts/unity-meta.mjs",
+    "dev": "npm run build && node scripts/serve.mjs",
+    "logo": "python3 scripts/generate_logo.py",
+    "unity:render": "npm run build && node scripts/unity.mjs render",
+    "unity:export": "npm run build && node scripts/export-unitypackage.mjs",
+    "store": "npm run build && node scripts/store.mjs",
+    "release:pack": "node -e \"require('fs').mkdirSync('dist/release', { recursive: true })\" && npm pack --workspace packages/docusaurus-theme --pack-destination dist/release"
+  },
+  "devDependencies": {
+    "style-dictionary": "^5.5.5"
+  }
+}

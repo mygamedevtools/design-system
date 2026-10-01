@@ -1,0 +1,14 @@
+Copyright (c) 2026 MyGameDevTools. All rights reserved.
+
+This repository, including the My Gamedev Tools name, logo, wordmark, design tokens, styles,
+templates, scripts and documentation, is proprietary. No license is granted to use, copy, modify
+or distribute any part of it without prior written permission from MyGameDevTools.
+
+Third-party fonts in this repository are not covered by the above and remain under their own
+license, the SIL Open Font License 1.1:
+
+- Russo One (assets/fonts/russo-one/OFL.txt)
+- Rethink Sans (assets/fonts/rethink-sans/OFL.txt)
+- Red Hat Mono (assets/fonts/red-hat-mono/OFL.txt)
+
+The same fonts are included in unity/MyGamedevToolsUI/Fonts with their license files.

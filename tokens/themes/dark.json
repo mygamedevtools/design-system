@@ -1,0 +1,157 @@
+{
+  "color": {
+    "$type": "color",
+    "bg": {
+      "$value": "{palette.ink}"
+    },
+    "surface": {
+      "$value": "{palette.ink-raised}"
+    },
+    "border": {
+      "$value": "{palette.ink-line}"
+    },
+    "text": {
+      "$value": "{palette.cream}"
+    },
+    "text-muted": {
+      "$value": "{palette.dust}"
+    },
+    "primary": {
+      "$value": "{palette.cream}",
+      "$description": "Primary button fill"
+    },
+    "on-primary": {
+      "$value": "{palette.ink}"
+    },
+    "primary-hover": {
+      "$value": "#E0DACB",
+      "$description": "Primary button fill on hover"
+    },
+    "link": {
+      "$value": "{palette.amber}"
+    },
+    "accent": {
+      "$value": "{palette.amber}",
+      "$description": "Eyebrows and small accent text"
+    },
+    "focus": {
+      "$value": "{palette.teal}"
+    },
+    "mark-frame": {
+      "$value": "{palette.cream}"
+    },
+    "mark-axis-1": {
+      "$value": "{palette.tomato}"
+    },
+    "mark-axis-2": {
+      "$value": "{palette.amber}"
+    },
+    "mark-axis-3": {
+      "$value": "{palette.teal}"
+    },
+    "stripe-1": {
+      "$value": "{palette.tomato}"
+    },
+    "stripe-2": {
+      "$value": "{palette.amber}"
+    },
+    "stripe-3": {
+      "$value": "{palette.teal}"
+    },
+    "code-bg": {
+      "$value": "{palette.ink-sunken}"
+    },
+    "code-text": {
+      "$value": "{palette.cream}"
+    },
+    "code-keyword": {
+      "$value": "{palette.teal-soft}"
+    },
+    "code-string": {
+      "$value": "{palette.amber}"
+    },
+    "code-comment": {
+      "$value": "{palette.comment}"
+    },
+    "success": {
+      "$value": "#4E9F3D",
+      "$description": "Solid fill for success labels"
+    },
+    "on-success": {
+      "$value": "{palette.ink}",
+      "$description": "Text on the solid success fill (≥4.5:1)"
+    },
+    "success-text": {
+      "$value": "#59A549",
+      "$description": "Success text and icons on the success background (≥4.5:1)"
+    },
+    "success-bg": {
+      "$value": "#202F23",
+      "$description": "Tinted background for success callouts and labels"
+    },
+    "success-border": {
+      "$value": "#325A2D",
+      "$description": "Border for success callouts and labels"
+    },
+    "info": {
+      "$value": "#4182DA",
+      "$description": "Solid fill for info labels"
+    },
+    "on-info": {
+      "$value": "{palette.ink}",
+      "$description": "Text on the solid info fill (≥4.5:1)"
+    },
+    "info-text": {
+      "$value": "#5C93DF",
+      "$description": "Info text and icons on the info background (≥4.5:1)"
+    },
+    "info-bg": {
+      "$value": "#1D293F",
+      "$description": "Tinted background for info callouts and labels"
+    },
+    "info-border": {
+      "$value": "#2A4A7B",
+      "$description": "Border for info callouts and labels"
+    },
+    "warning": {
+      "$value": "{palette.amber}",
+      "$description": "Solid fill for warning labels"
+    },
+    "on-warning": {
+      "$value": "{palette.ink}",
+      "$description": "Text on the solid warning fill (≥4.5:1)"
+    },
+    "warning-text": {
+      "$value": "{palette.amber}",
+      "$description": "Warning text and icons on the warning background (≥4.5:1)"
+    },
+    "warning-bg": {
+      "$value": "#3E301B",
+      "$description": "Tinted background for warning callouts and labels"
+    },
+    "warning-border": {
+      "$value": "#845E18",
+      "$description": "Border for warning callouts and labels"
+    },
+    "error": {
+      "$value": "#DE5060",
+      "$description": "Solid fill for error labels"
+    },
+    "on-error": {
+      "$value": "{palette.ink}",
+      "$description": "Text on the solid error fill (≥4.5:1)"
+    },
+    "error-text": {
+      "$value": "#E26674",
+      "$description": "Error text and icons on the error background (≥4.5:1)"
+    },
+    "error-bg": {
+      "$value": "#391C25",
+      "$description": "Tinted background for error callouts and labels"
+    },
+    "error-border": {
+      "$value": "#782734",
+      "$description": "Border for error callouts and labels"
+    }
+  }
+}

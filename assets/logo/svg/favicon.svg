@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img">
+  <title>My Gamedev Tools</title>
+  <style>
+    .f{stroke:#16161D} .d{fill:#16161D} .a1{stroke:#E4572E} .a2{stroke:#B87A00} .a3{stroke:#1F8A85}
+    @media (prefers-color-scheme: dark) { .f{stroke:#F5F0E1} .d{fill:#F5F0E1} .a2{stroke:#F3A712} .a3{stroke:#29A19C} }
+  </style>
+  <polygon class="f" points="50,6 88.1,28 88.1,72 50,94 11.9,72 11.9,28" fill="none" stroke-width="7" stroke-linejoin="round"/>
+  <g stroke-width="12" stroke-linecap="round">
+    <line class="a1" x1="50" y1="50" x2="50" y2="24"/>
+    <line class="a2" x1="50" y1="50" x2="27.5" y2="63"/>
+    <line class="a3" x1="50" y1="50" x2="72.5" y2="63"/>
+  </g>
+  <circle class="d" cx="50" cy="50" r="8"/>
+</svg>

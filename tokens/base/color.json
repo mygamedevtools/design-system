@@ -1,0 +1,24 @@
+{
+  "palette": {
+    "$type": "color",
+    "$description": "Raw Cartridge palette. Don't use these directly in components; use the semantic color.* tokens instead.",
+    "cream": { "$value": "#F5F0E1", "$description": "Light background" },
+    "cream-raised": { "$value": "#FFFBF0", "$description": "Light surface" },
+    "cream-line": { "$value": "#DDD5C2", "$description": "Light borders" },
+    "ink": { "$value": "#16161D", "$description": "Dark background, light text" },
+    "ink-raised": { "$value": "#22222C", "$description": "Dark surface (cabinet)" },
+    "ink-sunken": { "$value": "#101015", "$description": "Dark code blocks" },
+    "ink-line": { "$value": "#34343F", "$description": "Dark borders" },
+    "stone": { "$value": "#45433E", "$description": "Muted text on cream" },
+    "dust": { "$value": "#C9C5BA", "$description": "Muted text on ink" },
+    "tomato": { "$value": "#E4572E", "$description": "Stripe 1 and axis 1" },
+    "tomato-deep": { "$value": "#B8401F", "$description": "Tomato for text on cream (4.9:1)" },
+    "tomato-bright": { "$value": "#EF7049", "$description": "Hover state for tomato fills" },
+    "amber": { "$value": "#F3A712", "$description": "Stripe 2 and axis 2 on dark" },
+    "amber-deep": { "$value": "#B87A00", "$description": "Amber for graphics on cream (3:1)" },
+    "teal": { "$value": "#29A19C", "$description": "Stripe 3 and axis 3 on dark" },
+    "teal-deep": { "$value": "#1F8A85", "$description": "Teal for graphics on cream (3.7:1)" },
+    "teal-soft": { "$value": "#7FD1CC", "$description": "Code keywords on ink" },
+    "comment": { "$value": "#9A978E", "$description": "Code comments on ink" }
+  }
+}

@@ -1,0 +1,228 @@
+/* Maps Infima (Docusaurus' styling layer) onto the My Gamedev Tools tokens.
+   The --mgt-* variables already switch with data-theme, so one block covers light and dark.
+   The selector outranks Infima's own `[data-theme='dark']:root` rules regardless of load order. */
+:root,
+html[data-theme]:root {
+  /* Fontsource registers the variable fonts as "<Name> Variable". */
+  --ifm-font-family-base: 'Rethink Sans Variable', var(--mgt-font-family-body);
+  --ifm-font-family-monospace: 'Red Hat Mono Variable', var(--mgt-font-family-mono);
+  --ifm-heading-font-family: var(--mgt-font-family-display);
+  --ifm-heading-font-weight: 400;
+  --ifm-code-font-size: 92%;
+
+  --ifm-color-primary: var(--mgt-color-link);
+  --ifm-color-primary-dark: color-mix(in srgb, var(--ifm-color-primary) 90%, black);
+  --ifm-color-primary-darker: color-mix(in srgb, var(--ifm-color-primary) 85%, black);
+  --ifm-color-primary-darkest: color-mix(in srgb, var(--ifm-color-primary) 70%, black);
+  --ifm-color-primary-light: color-mix(in srgb, var(--ifm-color-primary) 90%, white);
+  --ifm-color-primary-lighter: color-mix(in srgb, var(--ifm-color-primary) 85%, white);
+  --ifm-color-primary-lightest: color-mix(in srgb, var(--ifm-color-primary) 70%, white);
+
+  --ifm-background-color: var(--mgt-color-bg);
+  --ifm-background-surface-color: var(--mgt-color-surface);
+  --ifm-font-color-base: var(--mgt-color-text);
+  --ifm-heading-color: var(--mgt-color-text);
+  --ifm-color-content-secondary: var(--mgt-color-text-muted);
+  --ifm-toc-border-color: var(--mgt-color-border);
+  --ifm-hr-background-color: var(--mgt-color-border);
+  --ifm-table-border-color: var(--mgt-color-border);
+
+  --ifm-navbar-background-color: var(--mgt-color-surface);
+  --ifm-navbar-shadow: none;
+  --ifm-footer-background-color: var(--mgt-palette-ink);
+  --ifm-footer-color: var(--mgt-palette-cream);
+  --ifm-footer-link-color: var(--mgt-palette-dust);
+  --ifm-footer-link-hover-color: var(--mgt-palette-amber);
+  --ifm-footer-title-color: var(--mgt-palette-cream);
+
+  /* Status colors. Infima calls error "danger". */
+  --ifm-color-success: var(--mgt-color-success);
+  --ifm-color-success-dark: color-mix(in srgb, var(--ifm-color-success) 90%, black);
+  --ifm-color-success-darker: color-mix(in srgb, var(--ifm-color-success) 85%, black);
+  --ifm-color-success-darkest: color-mix(in srgb, var(--ifm-color-success) 70%, black);
+  --ifm-color-success-light: color-mix(in srgb, var(--ifm-color-success) 90%, white);
+  --ifm-color-success-lighter: color-mix(in srgb, var(--ifm-color-success) 85%, white);
+  --ifm-color-success-lightest: color-mix(in srgb, var(--ifm-color-success) 70%, white);
+  --ifm-color-success-contrast-background: var(--mgt-color-success-bg);
+  --ifm-color-success-contrast-foreground: var(--mgt-color-text);
+
+  --ifm-color-info: var(--mgt-color-info);
+  --ifm-color-info-dark: color-mix(in srgb, var(--ifm-color-info) 90%, black);
+  --ifm-color-info-darker: color-mix(in srgb, var(--ifm-color-info) 85%, black);
+  --ifm-color-info-darkest: color-mix(in srgb, var(--ifm-color-info) 70%, black);
+  --ifm-color-info-light: color-mix(in srgb, var(--ifm-color-info) 90%, white);
+  --ifm-color-info-lighter: color-mix(in srgb, var(--ifm-color-info) 85%, white);
+  --ifm-color-info-lightest: color-mix(in srgb, var(--ifm-color-info) 70%, white);
+  --ifm-color-info-contrast-background: var(--mgt-color-info-bg);
+  --ifm-color-info-contrast-foreground: var(--mgt-color-text);
+
+  --ifm-color-warning: var(--mgt-color-warning);
+  --ifm-color-warning-dark: color-mix(in srgb, var(--ifm-color-warning) 90%, black);
+  --ifm-color-warning-darker: color-mix(in srgb, var(--ifm-color-warning) 85%, black);
+  --ifm-color-warning-darkest: color-mix(in srgb, var(--ifm-color-warning) 70%, black);
+  --ifm-color-warning-light: color-mix(in srgb, var(--ifm-color-warning) 90%, white);
+  --ifm-color-warning-lighter: color-mix(in srgb, var(--ifm-color-warning) 85%, white);
+  --ifm-color-warning-lightest: color-mix(in srgb, var(--ifm-color-warning) 70%, white);
+  --ifm-color-warning-contrast-background: var(--mgt-color-warning-bg);
+  --ifm-color-warning-contrast-foreground: var(--mgt-color-text);
+
+  --ifm-color-danger: var(--mgt-color-error);
+  --ifm-color-danger-dark: color-mix(in srgb, var(--ifm-color-danger) 90%, black);
+  --ifm-color-danger-darker: color-mix(in srgb, var(--ifm-color-danger) 85%, black);
+  --ifm-color-danger-darkest: color-mix(in srgb, var(--ifm-color-danger) 70%, black);
+  --ifm-color-danger-light: color-mix(in srgb, var(--ifm-color-danger) 90%, white);
+  --ifm-color-danger-lighter: color-mix(in srgb, var(--ifm-color-danger) 85%, white);
+  --ifm-color-danger-lightest: color-mix(in srgb, var(--ifm-color-danger) 70%, white);
+  --ifm-color-danger-contrast-background: var(--mgt-color-error-bg);
+  --ifm-color-danger-contrast-foreground: var(--mgt-color-text);
+  --ifm-color-secondary-contrast-background: var(--mgt-color-bg);
+  --ifm-color-secondary-contrast-foreground: var(--mgt-color-text);
+
+  --ifm-global-radius: var(--mgt-radius-md);
+  --ifm-code-border-radius: var(--mgt-radius-sm);
+  --ifm-button-border-radius: var(--mgt-radius-pill);
+}
+
+/* Russo One has a single weight; keep the browser from faking bold. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar__title,
+.footer__title,
+.hero__title {
+  font-family: var(--mgt-font-family-display);
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+/* Signature tri-color rule under the navbar. */
+.navbar {
+  border-bottom: 0;
+}
+
+.navbar::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: var(--mgt-stripe-rule);
+  background: linear-gradient(
+    90deg,
+    var(--mgt-color-stripe-1) 0 33.333%,
+    var(--mgt-color-stripe-2) 0 66.666%,
+    var(--mgt-color-stripe-3) 0
+  );
+}
+
+/* Brand primary buttons are ink on light and cream on dark, not the link color. */
+.button--primary {
+  --ifm-button-background-color: var(--mgt-color-primary);
+  --ifm-button-border-color: var(--mgt-color-primary);
+  --ifm-button-color: var(--mgt-color-on-primary);
+}
+
+.button--primary:hover {
+  --ifm-button-background-color: color-mix(in srgb, var(--mgt-color-primary) 88%, var(--mgt-color-bg));
+  --ifm-button-border-color: var(--ifm-button-background-color);
+}
+
+:focus-visible {
+  outline: 2px solid var(--mgt-color-focus);
+  outline-offset: 2px;
+}
+
+/* Admonitions (:::note, :::tip, :::info, :::warning, :::danger) ------------------
+   A full 1px border instead of Infima's thick left bar, a mono uppercase heading in the
+   status text color, and the status border color. Docusaurus hashes the heading class
+   names, hence the attribute selectors. */
+.theme-admonition {
+  --ifm-alert-border-width: 1px;
+  --ifm-alert-border-left-width: 1px;
+  --ifm-alert-border-radius: var(--mgt-radius-md);
+  --ifm-alert-shadow: none;
+}
+
+.theme-admonition [class*='admonitionHeading'] {
+  font-family: var(--mgt-font-family-mono);
+  font-weight: var(--mgt-font-weight-semibold);
+  letter-spacing: var(--mgt-font-letter-spacing-label);
+}
+
+.theme-admonition [class*='admonitionIcon'] svg {
+  fill: currentColor;
+}
+
+.alert--secondary {
+  --ifm-alert-border-color: var(--mgt-color-border);
+}
+
+.alert--secondary [class*='admonitionHeading'] {
+  color: var(--mgt-color-text-muted);
+}
+
+.alert--success {
+  --ifm-alert-border-color: var(--mgt-color-success-border);
+}
+
+.alert--success [class*='admonitionHeading'] {
+  color: var(--mgt-color-success-text);
+}
+
+.alert--info {
+  --ifm-alert-border-color: var(--mgt-color-info-border);
+}
+
+.alert--info [class*='admonitionHeading'] {
+  color: var(--mgt-color-info-text);
+}
+
+.alert--warning {
+  --ifm-alert-border-color: var(--mgt-color-warning-border);
+}
+
+.alert--warning [class*='admonitionHeading'] {
+  color: var(--mgt-color-warning-text);
+}
+
+.alert--danger {
+  --ifm-alert-border-color: var(--mgt-color-error-border);
+}
+
+.alert--danger [class*='admonitionHeading'] {
+  color: var(--mgt-color-error-text);
+}
+
+/* Badges (<span class="badge badge--success">Stable</span>) ----------------------- */
+.badge {
+  font-family: var(--mgt-font-family-mono);
+  font-weight: var(--mgt-font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: var(--mgt-radius-pill);
+}
+
+.badge--success {
+  --ifm-badge-background-color: var(--mgt-color-success);
+  --ifm-badge-border-color: var(--mgt-color-success);
+  --ifm-badge-color: var(--mgt-color-on-success);
+}
+
+.badge--info {
+  --ifm-badge-background-color: var(--mgt-color-info);
+  --ifm-badge-border-color: var(--mgt-color-info);
+  --ifm-badge-color: var(--mgt-color-on-info);
+}
+
+.badge--warning {
+  --ifm-badge-background-color: var(--mgt-color-warning);
+  --ifm-badge-border-color: var(--mgt-color-warning);
+  --ifm-badge-color: var(--mgt-color-on-warning);
+}
+
+.badge--danger {
+  --ifm-badge-background-color: var(--mgt-color-error);
+  --ifm-badge-border-color: var(--mgt-color-error);
+  --ifm-badge-color: var(--mgt-color-on-error);
+}

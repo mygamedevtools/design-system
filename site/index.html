@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Gamedev Tools — Design System</title>
+  <link rel="icon" href="../assets/logo/svg/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../build/tokens.css">
+  <link rel="stylesheet" href="../assets/fonts/fonts.css">
+  <link rel="stylesheet" href="site.css">
+  <script>
+    // Apply the saved theme before first paint.
+    try {
+      const saved = localStorage.getItem('mgt-theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch {}
+  </script>
+  <script type="module" src="site.js"></script>
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="i-success" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.2 9.5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><path d="M12 7.6v.1"/></symbol>
+    <symbol id="i-warning" viewBox="0 0 24 24"><path d="M12 3.5L21.5 20h-19z"/><path d="M12 10v4.5"/><path d="M12 17.4v.1"/></symbol>
+    <symbol id="i-error" viewBox="0 0 24 24"><path d="M8.3 3h7.4L21 8.3v7.4L15.7 21H8.3L3 15.7V8.3z"/><path d="M9.2 9.2l5.6 5.6M14.8 9.2l-5.6 5.6"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M5 3.5h10l4 4v13H5z"/><path d="M9 11h6M9 15h6"/></symbol>
+  </svg>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="topbar__brand" href="#top" aria-label="My Gamedev Tools design system, back to top">
+        <img class="logo-swap" data-logo="lockup-horizontal" alt="My Gamedev Tools" height="26">
+      </a>
+      <nav class="topbar__nav" aria-label="Sections">
+        <a href="#decisions">Decisions</a>
+        <a href="#logo">Logo</a>
+        <a href="#color">Color</a>
+        <a href="#type">Type</a>
+        <a href="#components">Components</a>
+        <a href="#status">Status</a>
+        <a href="#store">Store</a>
+        <a href="#unity">Unity UI</a>
+        <a href="#tokens">Tokens</a>
+      </nav>
+      <div class="theme-switch" role="group" aria-label="Color theme">
+        <button type="button" data-theme-choice="system" aria-pressed="true">Auto</button>
+        <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+      </div>
+    </div>
+    <div class="rule" aria-hidden="true"></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Design system · v0.1</span></div>
+      <h1 class="display hero__title">My Gamedev Tools</h1>
+      <p class="lead">The shared look for every My Gamedev Tools package: docs sites, store pages, and the runtime UI in package samples. Everything here is built from the tokens in <code>tokens/</code>.</p>
+    </section>
+
+    <section id="decisions" class="section">
+      <h2 class="display">Decisions</h2>
+      <dl class="decisions">
+        <div><dt>Mark</dt><dd><strong>H1</strong>: hexagon frame with three rounded axes, a 3D-vector gizmo. One mark for every package.</dd></div>
+        <div><dt>Theme</dt><dd><strong>Cartridge</strong>: cream and ink, with tomato, amber and teal stripes. Light and dark.</dd></div>
+        <div><dt>Type</dt><dd><strong>C4</strong>: Russo One for display, Rethink Sans for text, Red Hat Mono for code and labels.</dd></div>
+        <div><dt>Store</dt><dd>Ink cards with diagonal corner stripes that bleed off the top and right edges.</dd></div>
+        <div><dt>Unity</dt><dd>Editor windows keep Unity's standard look. The brand is for runtime UI in samples: loading screens, HUDs, menus.</dd></div>
+        <div><dt>Status</dt><dd>Green, cobalt and cherry for success, info and error; amber doubles as warning. Shape-coded icons.</dd></div>
+        <div><dt>Docs</dt><dd>Docusaurus, through <code>@mygamedevtools/docusaurus-theme</code>.</dd></div>
+      </dl>
+    </section>
+
+    <section id="logo" class="section">
+      <h2 class="display">Logo</h2>
+      <div class="grid grid--3">
+        <figure class="tile" data-theme="light"><img src="../assets/logo/svg/mark-light.svg" alt="Mark on cream" width="120" height="120"><figcaption>mark-light.svg</figcaption></figure>
+        <figure class="tile" data-theme="dark"><img src="../assets/logo/svg/mark-dark.svg" alt="Mark on ink" width="120" height="120"><figcaption>mark-dark.svg</figcaption></figure>
+        <figure class="tile tile--mono" data-theme="light"><img src="../assets/logo/svg/mark-mono.svg" alt="Single-color mark" width="120" height="120"><figcaption>mark-mono.svg · currentColor</figcaption></figure>
+      </div>
+      <div class="grid grid--2">
+        <figure class="tile" data-theme="light"><img src="../assets/logo/svg/lockup-horizontal-light.svg" alt="Horizontal lockup on cream" height="56"><figcaption>lockup-horizontal</figcaption></figure>
+        <figure class="tile" data-theme="dark"><img src="../assets/logo/svg/lockup-stacked-dark.svg" alt="Stacked lockup on ink" height="84"><figcaption>lockup-stacked</figcaption></figure>
+      </div>
+      <figure class="tile tile--sizes">
+        <div class="sizes">
+          <img class="logo-swap" data-logo="mark" alt="" width="128" height="128">
+          <img class="logo-swap" data-logo="mark" alt="" width="64" height="64">
+          <img class="logo-swap" data-logo="mark" alt="" width="32" height="32">
+          <img class="logo-swap" data-logo="mark" alt="" width="24" height="24">
+          <img class="logo-swap" data-logo="mark" alt="" width="16" height="16">
+        </div>
+        <figcaption>128 · 64 · 32 · 24 · 16 px. Below 24px, use the mark without the wordmark.</figcaption>
+      </figure>
+    </section>
+
+    <section id="color" class="section">
+      <h2 class="display">Color</h2>
+      <h3 class="subhead">Palette</h3>
+      <div class="swatches" data-render="palette"></div>
+      <h3 class="subhead">Semantic roles</h3>
+      <p class="note">Use these in components. They switch between light and dark; the palette doesn't.</p>
+      <div class="table-wrap"><table class="roles" data-render="roles">
+        <thead><tr><th scope="col">Token</th><th scope="col">Light</th><th scope="col">Dark</th><th scope="col">Use</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </section>
+
+    <section id="type" class="section">
+      <h2 class="display">Type</h2>
+      <div class="grid grid--3">
+        <div class="tile tile--left">
+          <span class="label">Display · Russo One</span>
+          <span class="display specimen">Scene Loader</span>
+          <span class="note">Headings, wordmark, package names. Single weight; uppercase for package names.</span>
+        </div>
+        <div class="tile tile--left">
+          <span class="label">Text · Rethink Sans</span>
+          <span class="specimen specimen--body">One API for Build Settings and Addressables, with progress, phases and cancellation on every operation.</span>
+          <span class="note">Body copy and UI, weights 400 to 800.</span>
+        </div>
+        <div class="tile tile--left">
+          <span class="label">Code · Red Hat Mono</span>
+          <span class="specimen specimen--mono">TransitionAsync("target", "loading");</span>
+          <span class="note">Code, labels and eyebrows, weights 300 to 700.</span>
+        </div>
+      </div>
+      <div class="scale" data-render="scale"></div>
+    </section>
+
+    <section id="components" class="section">
+      <h2 class="display">Components</h2>
+      <div class="grid grid--2">
+        <div class="panel" data-theme="light" data-component-demo></div>
+        <div class="panel" data-theme="dark" data-component-demo></div>
+      </div>
+      <template id="component-demo">
+        <span class="eyebrow"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Scene Loader</span></span>
+        <h3 class="display demo__title">Scene transitions, in one line.</h3>
+        <p class="demo__text">Load, unload and transition Unity scenes in one line. <a href="#components">Read the docs</a>.</p>
+        <pre class="codeblock"><code><span class="tok-cls">MySceneManager</span>.TransitionAsync(<span class="tok-str">"target"</span>, <span class="tok-str">"loading"</span>); <span class="tok-com">// one line</span></code></pre>
+        <div class="row">
+          <button type="button" class="btn btn--primary">Get started</button>
+          <button type="button" class="btn btn--secondary">Install</button>
+        </div>
+        <label class="field"><span>Package name</span><input type="text" value="com.mygamedevtools.scene-loader"></label>
+      </template>
+    </section>
+
+    <section id="status" class="section">
+      <h2 class="display">Status</h2>
+      <p class="note">Success, info, warning and error each have a solid color, a tinted background, a border and a text color, all at 4.5:1 or better. Icons differ by shape, so status never depends on color alone. Warning reuses amber; the other three are reserved for status and never used as brand accents.</p>
+      <div class="grid grid--2">
+        <div class="panel" data-theme="light" data-status-demo></div>
+        <div class="panel" data-theme="dark" data-status-demo></div>
+      </div>
+      <template id="status-demo">
+        <span class="label">Labels · tinted</span>
+        <div class="row">
+          <span class="badge tone-success"><svg class="icon"><use href="#i-success"/></svg>Success</span>
+          <span class="badge tone-info"><svg class="icon"><use href="#i-info"/></svg>Info</span>
+          <span class="badge tone-warning"><svg class="icon"><use href="#i-warning"/></svg>Warning</span>
+          <span class="badge tone-error"><svg class="icon"><use href="#i-error"/></svg>Error</span>
+        </div>
+        <span class="label">Labels · solid</span>
+        <div class="row">
+          <span class="badge badge--solid tone-success"><svg class="icon"><use href="#i-success"/></svg>Success</span>
+          <span class="badge badge--solid tone-info"><svg class="icon"><use href="#i-info"/></svg>Info</span>
+          <span class="badge badge--solid tone-warning"><svg class="icon"><use href="#i-warning"/></svg>Warning</span>
+          <span class="badge badge--solid tone-error"><svg class="icon"><use href="#i-error"/></svg>Error</span>
+        </div>
+        <span class="label">Package lifecycle</span>
+        <div class="row">
+          <span class="badge badge--version tone-neutral">v5.0</span>
+          <span class="badge tone-success">Stable</span>
+          <span class="badge tone-info">Preview</span>
+          <span class="badge tone-warning">Deprecated</span>
+          <span class="badge badge--solid tone-error">Breaking</span>
+        </div>
+        <span class="label">Status dots</span>
+        <div class="row">
+          <span class="status tone-success"><i></i>Tests passing</span>
+          <span class="status tone-info"><i></i>Docs building</span>
+          <span class="status tone-warning"><i></i>Needs review</span>
+          <span class="status tone-error"><i></i>Build failed</span>
+        </div>
+        <span class="label">Callouts</span>
+        <div class="callout tone-neutral" role="note"><svg class="icon"><use href="#i-note"/></svg><div><strong>Note</strong><p>Neutral asides that aren't a status.</p></div></div>
+        <div class="callout tone-success" role="note"><svg class="icon"><use href="#i-success"/></svg><div><strong>Tip</strong><p>Every operation reports progress, phases and cancellation.</p></div></div>
+        <div class="callout tone-info" role="note"><svg class="icon"><use href="#i-info"/></svg><div><strong>Install</strong><p>Available from OpenUPM, the Asset Store, Git, or as a tarball.</p></div></div>
+        <div class="callout tone-warning" role="note"><svg class="icon"><use href="#i-warning"/></svg><div><strong>Breaking change in 5.0</strong><p>Read the upgrade guide from 4 to 5 before updating.</p></div></div>
+        <div class="callout tone-error" role="alert"><svg class="icon"><use href="#i-error"/></svg><div><strong>Scene not found</strong><p>"loading" isn't in Build Settings or Addressables.</p></div></div>
+        <span class="label">Field states</span>
+        <div class="field tone-error">
+          <label data-for="scene">Loading scene</label>
+          <input data-id="scene" type="text" value="loading" aria-invalid="true" data-describedby="scene-msg">
+          <span class="field__msg" data-id="scene-msg"><svg class="icon"><use href="#i-error"/></svg>Not found in Build Settings or Addressables.</span>
+        </div>
+        <div class="field tone-success">
+          <label data-for="ns">Default namespace</label>
+          <input data-id="ns" type="text" value="Example.Namespace" data-describedby="ns-msg">
+          <span class="field__msg" data-id="ns-msg"><svg class="icon"><use href="#i-success"/></svg>Valid namespace.</span>
+        </div>
+      </template>
+    </section>
+
+    <section id="store" class="section">
+      <h2 class="display">Asset Store and social</h2>
+      <p class="note">Live templates from <code>templates/</code>, filled through URL parameters. They follow Unity's rules: no text on the icon or social image, only title and publisher on the card. <code>npm run store -- &lt;listing folder&gt;</code> renders a whole listing.</p>
+      <div class="store-row" data-render="store"></div>
+      <div class="frames">
+        <div class="frame" style="--w: 1950; --h: 1300"><iframe title="Asset Store cover" src="../templates/asset-store/cover.html?image=/site/img/unity-loading-dark.png" width="1950" height="1300" loading="lazy"></iframe></div>
+        <div class="frame" style="--w: 1200; --h: 630"><iframe title="Asset Store social image, no text" src="../templates/asset-store/social.html" width="1200" height="630" loading="lazy"></iframe></div>
+        <div class="frame" style="--w: 2400; --h: 1600"><iframe title="Asset Store screenshot frame" src="../templates/asset-store/screenshot.html?caption=Progress%2C%20phases%20and%20cancellation%20on%20every%20operation.&amp;image=/site/img/unity-gallery-dark.png" width="2400" height="1600" loading="lazy"></iframe></div>
+        <div class="frame" style="--w: 1200; --h: 630"><iframe title="Docs social card" src="../templates/social/social-card.html" width="1200" height="630" loading="lazy"></iframe></div>
+        <div class="frame" style="--w: 1280; --h: 320"><iframe title="README banner, light" src="../templates/social/readme-banner.html?theme=light" width="1280" height="320"></iframe></div>
+        <div class="frame" style="--w: 1280; --h: 320"><iframe title="README banner, dark" src="../templates/social/readme-banner.html?theme=dark" width="1280" height="320"></iframe></div>
+      </div>
+    </section>
+
+    <section id="unity" class="section">
+      <h2 class="display">Unity runtime UI</h2>
+      <p class="note">For sample screens players see, like loading screens, HUDs and menus, built with UI Toolkit. Editor windows keep Unity's standard look. The kit ships inside samples as a <code>.unitypackage</code> (<code>npm run unity:export -- --for &lt;package&gt;</code>); games never depend on it. These are real Unity 6 renders; run <code>npm run unity:render</code> to refresh them.</p>
+      <div class="grid grid--2 renders">
+        <figure class="render"><img src="img/unity-loading-dark.png" alt="Branded loading screen rendered by Unity, dark" width="1280" height="720" loading="lazy"><figcaption>Loading screen · dark (default)</figcaption></figure>
+        <figure class="render"><img src="img/unity-loading-light.png" alt="Branded loading screen rendered by Unity, light" width="1280" height="720" loading="lazy"><figcaption>Loading screen · .mgt-theme-light</figcaption></figure>
+        <figure class="render"><img src="img/unity-gallery-dark.png" alt="Runtime components rendered by Unity, dark" width="1280" height="720" loading="lazy"><figcaption>Components · dark</figcaption></figure>
+        <figure class="render"><img src="img/unity-gallery-light.png" alt="Runtime components rendered by Unity, light" width="1280" height="720" loading="lazy"><figcaption>Components · light</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="tokens" class="section">
+      <h2 class="display">Tokens</h2>
+      <label class="field field--search"><span>Filter</span><input type="search" placeholder="color, space, font…" data-token-filter></label>
+      <div class="table-wrap"><table class="tokens" data-render="tokens">
+        <thead><tr><th scope="col">CSS variable</th><th scope="col">Value</th><th scope="col">Notes</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="../assets/logo/svg/mark-dark.svg" alt="" width="28" height="28">
+    <span>Generated from <code>tokens/</code>. Run <code>npm run dev</code> after editing tokens.</span>
+  </footer>
+</body>
+</html>

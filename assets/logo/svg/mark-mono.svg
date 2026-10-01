@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img">
+  <title>My Gamedev Tools</title>
+  <polygon points="50,6 88.1,28 88.1,72 50,94 11.9,72 11.9,28" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>
+  <g stroke-width="12" stroke-linecap="round">
+    <line x1="50" y1="50" x2="50" y2="24" stroke="currentColor"/>
+    <line x1="50" y1="50" x2="27.5" y2="63" stroke="currentColor"/>
+    <line x1="50" y1="50" x2="72.5" y2="63" stroke="currentColor"/>
+  </g>
+  <circle cx="50" cy="50" r="8" fill="currentColor"/>
+</svg>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <title>Asset Store card (420×280)</title>
+  <!-- Unity: the card may show only the asset title and the publisher's logo or name. -->
+  <link rel="stylesheet" href="../template.css">
+  <style>
+    body { width: 420px; height: 280px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 10px; font-size: 11px; }
+    .brand img { width: 30px; height: 30px; }
+    h1 { font-size: 40px; max-width: 70%; }
+  </style>
+  <script type="module" src="../template.js"></script>
+</head>
+<body data-stripes>
+  <div class="content brand label"><img data-logo="mark" alt=""><span>My Gamedev Tools</span></div>
+  <h1 class="content display" data-param="name">My Scene Manager</h1>
+</body>
+</html>

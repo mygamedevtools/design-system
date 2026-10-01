@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <title>Social card (1200×630)</title>
+  <link rel="stylesheet" href="../template.css">
+  <style>
+    body { width: 1200px; height: 630px; padding: 72px; display: flex; flex-direction: column; justify-content: space-between; }
+    .lockup { height: 44px; }
+    h1 { font-size: 84px; max-width: 760px; }
+    .subtitle { margin: 28px 0 0; max-width: 640px; font-size: 26px; line-height: 1.4; color: var(--mgt-color-text-muted); }
+    .code { display: inline-block; margin-top: 32px; padding: 16px 22px; font-size: 24px; }
+  </style>
+  <script type="module" src="../template.js"></script>
+</head>
+<body data-stripes>
+  <img class="content lockup" data-logo="lockup-horizontal" alt="My Gamedev Tools">
+  <div class="content">
+    <h1 class="display" data-param="title">Scene transitions, in one line.</h1>
+    <div class="code" data-param="code" data-hide-empty>MySceneManager.TransitionAsync("target", "loading");</div>
+    <p class="subtitle" data-param="subtitle" data-hide-empty>Addressable or not. Progress, phases and cancellation on every operation.</p>
+  </div>
+</body>
+</html>

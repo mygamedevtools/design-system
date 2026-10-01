@@ -1,0 +1,63 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:mgt="MyGameDevTools.UI" editor-extension-mode="False">
+    <!--
+        Every runtime component on one screen, rendered for the reference site by
+        npm run unity:render. Styles come from the PanelSettings theme (MyGamedevToolsTheme.tss).
+    -->
+    <ui:VisualElement class="mgt-root mgt-screen" style="flex-direction: row;">
+        <mgt:CornerStripes />
+        <ui:VisualElement style="width: 420px; margin-right: 20px;">
+            <ui:VisualElement class="mgt-eyebrow" style="margin-bottom: 12px;">
+                <ui:VisualElement class="mgt-eyebrow__bar" />
+                <ui:VisualElement class="mgt-eyebrow__bar mgt-eyebrow__bar--2" />
+                <ui:VisualElement class="mgt-eyebrow__bar mgt-eyebrow__bar--3" />
+                <ui:Label text="SCENE LOADER" class="mgt-label mgt-label--accent" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row; align-items: center; margin-bottom: 12px;">
+                <mgt:BrandMark style="margin-right: 12px;" />
+                <ui:Label text="Scene Transition Examples" class="mgt-title" />
+            </ui:VisualElement>
+            <ui:Label text="Each example is one line of code." class="mgt-text mgt-text--muted" style="margin-bottom: 16px;" />
+            <ui:VisualElement style="flex-direction: row; flex-wrap: wrap; margin-bottom: 8px;">
+                <ui:Button text="Add them, and exit Play Mode" class="mgt-button mgt-button--primary" style="margin-bottom: 8px;" />
+                <ui:Button text="Leave without changing anything" class="mgt-button" style="margin-bottom: 8px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row; margin-bottom: 16px;">
+                <ui:Label text="STABLE" class="mgt-badge mgt-badge--success" />
+                <ui:Label text="PREVIEW" class="mgt-badge mgt-badge--info" />
+                <ui:Label text="DEPRECATED" class="mgt-badge mgt-badge--warning" />
+                <ui:Label text="BREAKING" class="mgt-badge mgt-badge--solid mgt-badge--error" />
+            </ui:VisualElement>
+            <ui:VisualElement class="mgt-callout mgt-callout--warning">
+                <mgt:StatusIcon status="Warning" />
+                <ui:VisualElement class="mgt-callout__content">
+                    <ui:Label text="BREAKING CHANGE IN 5.0" class="mgt-callout__title" />
+                    <ui:Label text="Read the upgrade guide from 4 to 5 before updating." class="mgt-callout__body" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="mgt-panel" style="width: 400px; align-self: flex-start;">
+            <ui:Label text="ACTIVE SCENE" class="mgt-label" />
+            <ui:VisualElement style="flex-direction: row; align-items: center; margin: 4px 0 12px 0;">
+                <ui:VisualElement class="mgt-dot mgt-dot--warning" style="margin-right: 8px;" />
+                <ui:Label text="SceneB" class="mgt-title mgt-title--sm" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row; align-items: center; margin-bottom: 8px;">
+                <ui:Label text="Transition operation" class="mgt-text mgt-text--strong" style="flex-grow: 1;" />
+                <ui:Label text="62%" class="mgt-text mgt-text--strong" style="margin-right: 8px;" />
+                <ui:Button text="Cancel" class="mgt-button mgt-button--small mgt-button--danger" />
+            </ui:VisualElement>
+            <ui:VisualElement class="mgt-phases">
+                <ui:Label text="Resolving" class="mgt-phase mgt-phase--done" />
+                <ui:Label text="ScreenIn" class="mgt-phase mgt-phase--done" />
+                <ui:Label text="Unloading" class="mgt-phase mgt-phase--done" />
+                <ui:Label text="Loading" class="mgt-phase mgt-phase--current" />
+                <ui:Label text="Activating" class="mgt-phase" />
+                <ui:Label text="ScreenOut" class="mgt-phase" />
+                <ui:Label text="Completed" class="mgt-phase" />
+            </ui:VisualElement>
+            <ui:VisualElement class="mgt-progress" style="margin-top: 8px;">
+                <ui:VisualElement class="mgt-progress__fill" style="width: 62%;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

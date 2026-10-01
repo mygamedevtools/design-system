@@ -1,0 +1,63 @@
+@import '../build/tokens.css';
+@import '../assets/fonts/fonts.css';
+
+/* Shared by every template. Each template sets its own fixed canvas size on <body>. */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  background: var(--mgt-color-bg);
+  color: var(--mgt-color-text);
+  font-family: var(--mgt-font-family-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.display {
+  font-family: var(--mgt-font-family-display);
+  font-weight: 400;
+  font-synthesis: none;
+  text-transform: uppercase;
+  line-height: 0.98;
+  margin: 0;
+}
+
+.label {
+  font-family: var(--mgt-font-family-mono);
+  text-transform: uppercase;
+  letter-spacing: var(--mgt-font-letter-spacing-label);
+}
+
+.code {
+  font-family: var(--mgt-font-family-mono);
+  background: var(--mgt-color-code-bg);
+  color: var(--mgt-color-code-text);
+  border: 1px solid var(--mgt-color-border);
+  border-radius: var(--mgt-radius-md);
+}
+
+/* Diagonal stripes in the top-right corner. The lines run past the viewBox, so the
+   SVG (anchored to the top-right corner) trims them flush with both edges. */
+.stripes {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+}
+
+img.content {
+  align-self: flex-start;
+}

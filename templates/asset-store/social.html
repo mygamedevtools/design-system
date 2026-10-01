@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <title>Asset Store social image (1200×630)</title>
+  <!-- Unity: the Asset Store social image must not contain text. The mark has no lettering, so
+       the default (no ?image=) is always compliant. A supplied image must have no text either. -->
+  <link rel="stylesheet" href="../template.css">
+  <style>
+    body { width: 1200px; height: 630px; padding: 64px; display: flex; align-items: center; gap: 64px; }
+    .mark { width: 120px; height: 120px; flex-shrink: 0; align-self: flex-start; }
+    .frame { width: 800px; height: 500px; display: flex; align-items: center; justify-content: center; }
+    .shot { border-radius: 20px; border: 2px solid var(--mgt-color-border); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45); }
+    body.no-image { justify-content: flex-start; }
+    body.no-image .mark { width: 320px; height: 320px; align-self: center; margin-left: 120px; }
+    body.no-image .frame { display: none; }
+  </style>
+  <script type="module" src="../template.js"></script>
+</head>
+<body data-stripes>
+  <img class="content mark" data-logo="mark" alt="">
+  <div class="content frame"><img class="shot" data-param-src="image" data-fit alt=""></div>
+</body>
+</html>
