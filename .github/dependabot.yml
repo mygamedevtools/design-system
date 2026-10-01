@@ -1,0 +1,33 @@
+version: 2
+
+updates:
+  # One lockfile at the root covers the workspace (packages/docusaurus-theme) and the
+  # build tooling (Style Dictionary).
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+    labels:
+      - dependencies
+    groups:
+      # The theme's fonts ship together in the release tarball, so move them together.
+      fontsource:
+        patterns:
+          - '@fontsource/*'
+          - '@fontsource-variable/*'
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: ci
+    labels:
+      - dependencies
+    groups:
+      actions:
+        patterns:
+          - '*'
