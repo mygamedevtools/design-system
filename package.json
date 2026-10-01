@@ -16,7 +16,8 @@
     "unity:render": "npm run build && node scripts/unity.mjs render",
     "unity:export": "npm run build && node scripts/export-unitypackage.mjs",
     "store": "npm run build && node scripts/store.mjs",
-    "release:pack": "node -e \"require('fs').mkdirSync('dist/release', { recursive: true })\" && npm pack --workspace packages/docusaurus-theme --pack-destination dist/release"
+    "release:pack": "node -e \"require('fs').mkdirSync('dist/release', { recursive: true })\" && npm pack --workspace packages/docusaurus-theme --pack-destination dist/release",
+    "banner": "npm run build && node scripts/banner.mjs"
   },
   "devDependencies": {
     "style-dictionary": "^5.5.5"

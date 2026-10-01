@@ -1,4 +1,13 @@
-# My Gamedev Tools design system
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/banner-dark.png">
+    <img src="assets/readme/banner-light.png" alt="My Gamedev Tools design system" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://github.com/mygamedevtools/design-system/releases/latest"><img src="https://img.shields.io/github/v/release/mygamedevtools/design-system?sort=semver&color=E4572E" alt="Latest release"></a>
+</p>
 
 The shared look for every My Gamedev Tools package: docs sites, store pages, and the runtime UI in
 package samples. Editor windows keep Unity's standard look.
@@ -33,6 +42,7 @@ unity/
   MyGamedevToolsUI/          UI kit for runtime screens in samples: theme, tokens, components, fonts,
                              BrandMark, CornerStripes, StatusIcon (ships as a .unitypackage)
   Examples/                  screens rendered for the reference site (not shipped)
+assets/readme/               this README's banner (npm run banner)
 templates/                   Asset Store icon, card, cover, social and screenshot frames; docs social card and README banner (HTML)
 store/                       Asset Store kit docs and an example listing (real listings live in each package's repo)
 site/                        static reference site (site/img: Unity renders)
@@ -46,6 +56,7 @@ scripts/                     build, logo, Unity .meta generation, Unity renderin
 | --- | --- |
 | `npm run build` | Builds `build/tokens.css` and `tokens.json`, the Unity USS tokens and the theme's CSS and logos, and adds missing Unity `.meta` files |
 | `npm run dev` | `build`, then serves the repo at http://localhost:4321/site/ |
+| `npm run banner -- --name "<name>" --tagline "<tagline>" [--out <folder>]` | Renders a README banner in light and dark (`banner-light.png`, `banner-dark.png`, 2560×640) |
 | `npm run logo` | Regenerates the logo SVGs and PNGs (Python: `pip install -r scripts/requirements.txt`) |
 | `npm run release:pack` | Packs the Docusaurus theme to `dist/release/*.tgz` (the release workflow does this on every release) |
 | `npm run store -- <listing folder>` | Renders every Asset Store image at exact size and writes the description, Third-Party Notices and a checklist to `<listing folder>/dist` |
