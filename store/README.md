@@ -1,5 +1,7 @@
 # Asset Store kit
 
+For the publisher profile, see the [image exports and copy](publisher/README.md).
+
 Everything a My Gamedev Tools package needs for its Asset Store listing, in brand style. The tool
 and templates live here; each package's listing lives in that package's own repo:
 
