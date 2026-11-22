@@ -5,11 +5,12 @@ template serves every package. Open them through `npm run dev` (fonts don't load
 
 | Template | Size | Parameters |
 | --- | --- | --- |
-| `asset-store/icon.html` | 160×160 | `theme` |
+| `asset-store/icon.html` | 160×160 | `theme`, `publisher` (larger mark for the profile picture) |
 | `asset-store/card.html` | 420×280 | `name`, `theme` |
 | `asset-store/cover.html` | 1950×1300 | `name`, `tagline`, `image`, `theme` |
 | `asset-store/social.html` | 1200×630 | `image` (no text allowed), `theme` |
 | `asset-store/screenshot.html` | 2400×1600 | `eyebrow`, `caption`, `image`, `theme` |
+| `asset-store/publisher-banner.html` | 1200×800 | — |
 | `social/social-card.html` | 1200×630 | `title`, `code`, `subtitle`, `theme` (docs link previews; has text, so not for the Asset Store) |
 | `social/readme-banner.html` | 1280×320 | `name`, `tagline`, `theme` (render both for GitHub light/dark) |
 
